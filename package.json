@@ -1,10 +1,13 @@
 {
+  "homepage": "https://amkreiner.github.io/BuyItAllOnline",
   "name": "buyitallonline",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "cd frontend && npm install && npm run build",
     "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
   },
@@ -17,7 +20,6 @@
   "bugs": {
     "url": "https://github.com/amkreiner/buyitallonline/issues"
   },
-  "homepage": "https://github.com/amkreiner/buyitallonline#readme",
   "dependencies": {
     "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
@@ -36,7 +38,8 @@
   },
   "devDependencies": {
     "eslint": "^7.19.0",
-    "eslint-plugin-react": "^7.22.0"
+    "eslint-plugin-react": "^7.22.0",
+    "gh-pages": "^3.2.3"
   },
   "engines": {
     "node": "14.9.0",
